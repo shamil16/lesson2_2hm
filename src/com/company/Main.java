@@ -3,23 +3,26 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Printable[] printables={createObject("Dog"),createObject("Cat"),createObject("Bear")};
-        for (Printable print:printables) {
-            print.print();
+        Printable print[] = {createObject("John"), createObject("krivetka"), createObject("Misha")};
+        for (Printable printable: print){
+            printable.print();
         }
     }
 
     public static Printable createObject(String className) {
-        switch (className) {
 
-            case "dog":
-                Dog dog = new Dog(13, "John");
+        switch (className){
+            case "John":
+                Dog dog= new Dog(10, "John", "Кусать");
+
                 return dog;
-            case "сat":
-                Cat cat = new Cat("Black","Сиамская");
+
+            case "krivetka":
+                Cat cat = new Cat(4, "krivetka", "Царапать");
                 return cat;
-            case "Bear":
-                Bear bear = new Bear(10,23);
+
+            case "Misha":
+                Bear bear = new Bear(5, "Misha","удар лапой");
                 return bear;
         }
         return null;

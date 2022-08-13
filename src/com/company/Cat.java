@@ -1,24 +1,22 @@
 package com.company;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     private String color;
     private String breed;
+    private String Damage;
 
-    public Cat(String color, String breed) {
-        this.color = color;
-        this.breed = breed;
+    public Cat(int age, String name, String Damage) {
+        super(age, name);
+        this.Damage = Damage;
     }
 
-    public String getColor() {
-        return color;
-    }
+    public String getDamage() {
+        return Damage;
 
-    public String getBreed() {
-        return breed;
     }
 
     @Override
     public void print() {
-        System.out.println("Порода: " +breed +"\nЦвет" +color);
+        System.out.println(getInfo() + "\nDamage: " + Damage);
     }
 }

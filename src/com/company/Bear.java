@@ -1,24 +1,20 @@
 package com.company;
 
 public class Bear extends Animal {
-    private int claws;
-    private int tail;
+    private String Damage;
 
-    public Bear(int claws, int tail) {
-        this.claws = claws;
-        this.tail = tail;
+
+    public Bear(int age, String name, String Damage) {
+        super(age, name);
+        this.Damage = Damage;
     }
 
-    public int getClaws() {
-        return claws;
-    }
-
-    public int getTail() {
-        return tail;
+    public String getDamage() {
+        return Damage;
     }
 
     @Override
     public void print() {
-        System.out.println("Длина когтей" +claws +"\nХвост" +tail);
+        System.out.println(getInfo() + "\nDamage: " + Damage);
     }
 }

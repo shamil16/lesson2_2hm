@@ -2,23 +2,20 @@ package com.company;
 
 public class Dog extends Animal{
     private int age;
-    private String name;
+    private String Damage;
 
-    public Dog(int age, String name) {
-        this.age = age;
-        this.name = name;
+
+    public Dog(int age, String name, String damage) {
+        super(age, name);
+        this.Damage = damage;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getName() {
-        return name;
+    public String getDamage() {
+        return Damage;
     }
 
     @Override
     public void print() {
-        System.out.println("Количество лет: " +age +"\nИмя: " +name);
+        System.out.println(getInfo() + "\nDamage: " + Damage);
     }
 }
